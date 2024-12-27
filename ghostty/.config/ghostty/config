@@ -3,8 +3,12 @@ theme = catppuccin-mocha
 # font-family = Meslo LGS Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font
 font-family = CaskaydiaCove Nerd Font
-font-size = 12
+font-size = 16
 background-opacity = 0.95
 gtk-titlebar = false
 # custom-shader = /home/chris/bloom.glsl
 #custom-shader = /home/chris/crt.glsl
+quick-terminal-position=top
+quick-terminal-screen=main
+quick-terminal-autohide=false
+keybind =global:f12=toggle_quick_terminal
