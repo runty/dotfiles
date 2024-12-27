@@ -2,11 +2,12 @@ theme = catppuccin-mocha
 # theme = GruvboxDark
 # font-family = Meslo LGS Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font
-# font-family = CaskaydiaCove Nerd Font
+#font-family = CaskaydiaCove Nerd Font
 #font-style = CaskaydiaCove NFM Regular
-# font-family = Dank Mono
+#font-family = Dank Mono
 font-family = TX02 Nerd Font
-font-size = 15
+# font-family = CommitMono Nerd Font
+font-size = 12
 background-opacity = 0.95
 gtk-titlebar = false
 # custom-shader = /home/chris/bloom.glsl
@@ -14,4 +15,19 @@ gtk-titlebar = false
 quick-terminal-position=top
 quick-terminal-screen=main
 quick-terminal-autohide=false
+macos-option-as-alt=true
+
 keybind =global:f12=toggle_quick_terminal
+keybind =f10=reload_config
+keybind =ctrl+alt+h=goto_split:left
+keybind =ctrl+alt+j=goto_split:bottom
+keybind =ctrl+alt+k=goto_split:top
+keybind =ctrl+alt+l=goto_split:right
+keybind =ctrl+alt+u=goto_split:previous
+keybind =ctrl+alt+i=goto_split:next
+keybind =ctrl+alt+o=new_split:down
+keybind =ctrl+alt+p=new_split:right
+keybind =shift+alt+h=resize_split:left,10
+keybind =shift+alt+l=resize_split:right,10
+keybind =shift+alt+j=resize_split:down,10
+keybind =shift+alt+k=resize_split:up,10
