@@ -17,5 +17,13 @@
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // ... other normal and visual mode keymaps
+      "L": "pane::ActivateNextItem",
+      "H": "pane::ActivatePrevItem"
+    }
   }
 ]
