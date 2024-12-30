@@ -7,9 +7,10 @@ theme = catppuccin-mocha
 #CaskaydiaCove NFM Regular
 #font-family = Dank Mono
 font-family = TX02 Nerd Font SemiCondensed Retina
-# font-family = Maple Mono NF
+#font-family = Maple Mono NF
 # font-family = CommitMono Nerd Font
-font-size = 13
+#font-family = 0xProto Nerd Font Mono
+font-size = 16
 background-opacity = 0.95
 gtk-titlebar = false
 # custom-shader = /home/chris/bloom.glsl
@@ -20,6 +21,11 @@ quick-terminal-autohide=false
 macos-option-as-alt=true
 shell-integration-features = no-cursor
 cursor-style = underline
+
+  macos-icon = custom-style
+  macos-icon-frame = plastic
+  macos-icon-ghost-color = cba6f7
+  macos-icon-screen-color = 181825
 
 keybind =global:f12=toggle_quick_terminal
 keybind =f10=reload_config
