@@ -6,26 +6,32 @@ theme = catppuccin-mocha
 #font-style = TX02 Nerd Font SemiCondensed Retina
 #CaskaydiaCove NFM Regular
 #font-family = Dank Mono
-font-family = TX02 Nerd Font SemiCondensed Retina
+#font-family = TX02 Nerd Font SemiCondensed Retina
+font-family = MonoLisa Nerd Font
+#font-family = ServerMono Nerd Font
 #font-family = Maple Mono NF
 # font-family = CommitMono Nerd Font
 #font-family = 0xProto Nerd Font Mono
-font-size = 16
+font-size = 15
 background-opacity = 0.95
 gtk-titlebar = false
-# custom-shader = /home/chris/bloom.glsl
-#custom-shader = /home/chris/crt.glsl
+#custom-shader = /Users/phobus/.config/ghostty/shaders/bettercrt.glsl
+#custom-shader = /Users/phobus/.config/ghostty/shaders/bloom.glsl
 quick-terminal-position=top
 quick-terminal-screen=main
 quick-terminal-autohide=false
 macos-option-as-alt=true
 shell-integration-features = no-cursor
-cursor-style = underline
-
-  macos-icon = custom-style
-  macos-icon-frame = plastic
-  macos-icon-ghost-color = cba6f7
-  macos-icon-screen-color = 181825
+cursor-style = block
+cursor-style-blink = true
+window-height=45
+window-width=140
+focus-follows-mouse=true
+macos-titlebar-style = tabs
+macos-icon = custom-style
+macos-icon-frame = plastic
+macos-icon-ghost-color = cba6f7
+macos-icon-screen-color = 181825
 
 keybind =global:f12=toggle_quick_terminal
 keybind =f10=reload_config
