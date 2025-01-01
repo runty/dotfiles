@@ -17,7 +17,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Nord"
   },
   "vim_mode": true
 }

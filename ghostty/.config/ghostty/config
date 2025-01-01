@@ -1,4 +1,5 @@
-theme = catppuccin-mocha
+# theme = catppuccin-mocha
+theme = nord
 # theme = GruvboxDark
 # font-family = Meslo LGS Nerd Font Mono
 # font-family = CaskaydiaMono Nerd Font
@@ -7,12 +8,13 @@ theme = catppuccin-mocha
 #CaskaydiaCove NFM Regular
 #font-family = Dank Mono
 #font-family = TX02 Nerd Font SemiCondensed Retina
-font-family = MonoLisa Nerd Font
+#font-family = MonoLisa Nerd Font
+font-family = ComicCodeLigatures Nerd Font
 #font-family = ServerMono Nerd Font
 #font-family = Maple Mono NF
 # font-family = CommitMono Nerd Font
 #font-family = 0xProto Nerd Font Mono
-font-size = 15
+font-size = 14
 background-opacity = 0.95
 gtk-titlebar = false
 #custom-shader = /Users/phobus/.config/ghostty/shaders/bettercrt.glsl
