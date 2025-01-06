@@ -6,10 +6,11 @@ theme = nord
 #font-family = CaskaydiaCove Nerd Font
 #font-style = TX02 Nerd Font SemiCondensed Retina
 #CaskaydiaCove NFM Regular
-#font-family = Dank Mono
+#font-family = CodeliaLigatures Nerd Font
 #font-family = TX02 Nerd Font SemiCondensed Retina
 #font-family = MonoLisa Nerd Font
 font-family = ComicCodeLigatures Nerd Font
+#font-family = DankMonoNeue Nerd Font
 #font-family = ServerMono Nerd Font
 #font-family = Maple Mono NF
 # font-family = CommitMono Nerd Font

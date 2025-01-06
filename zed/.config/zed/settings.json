@@ -19,5 +19,9 @@
     "light": "One Light",
     "dark": "Nord"
   },
+  "terminal": {
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "line_height": "standard"
+  },
   "vim_mode": true
 }
