@@ -33,6 +33,17 @@ output "DP-2" {
     scale 1.4
 }
 
+output "DP-3" {
+    variable-refresh-rate
+    scale 1.5
+    mode "3840x2160@240.000"
+}
+
+output "HDMI-A-3" {
+   scale 2.0
+   mode "3840x2160@119.880"
+}
+
 layout {
     gaps 6
 
