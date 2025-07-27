@@ -118,6 +118,7 @@ spawn-at-startup "/usr/bin/swayidle" "-w" \
    "timeout" "200" "niri msg action power-off-monitors" \
    "resume" "niri msg action power-on-monitors" \
    "before-sleep" "swaylock -f"
+spawn-at-startup "/usr/bin/sway-audio-idle-inhibit"
 //spawn-at-startup "gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\""
 
  prefer-no-csd
@@ -344,11 +345,12 @@ binds {
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
+    Mod+Ctrl+F { toggle-windowed-fullscreen; }
     Mod+Shift+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Mod+Ctrl+F { expand-column-to-available-width; }
+    //Mod+Ctrl+F { expand-column-to-available-width; }
 
     Mod+C { center-column; }
 
@@ -359,8 +361,8 @@ binds {
     Mod+M { set-column-width "+10%"; }
 
     // Finer height adjustments when in column with other windows.
-    Mod+Shift+N { set-window-height "-10%"; }
-    Mod+Shift+M { set-window-height "+10%"; }
+    Mod+Shift+N { set-window-height "-3%"; }
+    Mod+Shift+M { set-window-height "+3%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
