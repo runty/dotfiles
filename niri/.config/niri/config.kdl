@@ -30,9 +30,13 @@ input {
 }
 
 output "DP-2" {
-    scale 1.4
+    scale 1.6
 }
 
+
+output "eDP-1" {
+   off
+}
 output "DP-3" {
     variable-refresh-rate
     scale 1.5
