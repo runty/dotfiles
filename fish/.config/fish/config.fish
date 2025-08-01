@@ -92,5 +92,7 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed pac
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'          # List amount of -git packages
 
 alias tb='nc termbin.com 9999'
-set -U fish_user_paths /opt/homebrew/bin/ $fish_user_paths
+set -U fish_user_paths /opt/homebrew/bin/ /opt/homebrew/opt/ruby/bin/ $fish_user_paths
 starship init fish | source
+
+string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
