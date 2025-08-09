@@ -40,7 +40,7 @@ output "eDP-1" {
 output "DP-3" {
     variable-refresh-rate
     scale 1.5
-    mode "3840x2160@240.000"
+    mode "3840x2160@119.880"
 }
 
 output "HDMI-A-3" {
@@ -177,7 +177,9 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+SPACE hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+SPACE hotkey-overlay-title="Run an Application: fuzzel" { spawn "walker"; }
+    Mod+Alt+SPACE hotkey-overlay-title="Omarchy" {spawn "~/.local/share/omarchy/bin/omarchy-menu"; }
+    Mod+Escape hotkey-overlay-title="System" {spawn "~/.local/share/omarchy/bin/omarchy-menu" "system"; }
     Mod+B hotkey-overlay-title="Open Chrome" { spawn "google-chrome-stable"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+X hotkey-overlay-title="Change wallpaper" { spawn "/home/phobus/bin/bg.sh"; }
@@ -396,7 +398,7 @@ binds {
     //
     // The allow-inhibiting=false property can be applied to other binds as well,
     // which ensures niri always processes them, even when an inhibitor is active.
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    ///Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
