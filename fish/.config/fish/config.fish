@@ -96,3 +96,8 @@ set -U fish_user_paths /opt/homebrew/bin/ /opt/homebrew/opt/ruby/bin/ $fish_user
 starship init fish | source
 
 string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/phobus/.lmstudio/bin
+# End of LM Studio CLI section
+
