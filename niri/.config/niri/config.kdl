@@ -117,6 +117,8 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "/home/phobus/bin/bg.sh"
+spawn-at-startup "swayosd-server"
+spawn-at-startup "mako"
 spawn-at-startup "/usr/bin/swayidle" "-w" \
    "timeout" "600" "swaylock -f" \
    "timeout" "1200" "niri msg action power-off-monitors" \
@@ -176,7 +178,7 @@ hotkey-overlay {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+SPACE hotkey-overlay-title="Run an Application: fuzzel" { spawn "walker"; }
     Mod+Alt+SPACE hotkey-overlay-title="Omarchy" {spawn "~/.local/share/omarchy/bin/omarchy-menu"; }
     Mod+Escape hotkey-overlay-title="System" {spawn "~/.local/share/omarchy/bin/omarchy-menu" "system"; }
@@ -195,7 +197,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
 
-    Mod+Q { close-window; }
+    Mod+W { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -376,7 +378,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    Mod+Q { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
