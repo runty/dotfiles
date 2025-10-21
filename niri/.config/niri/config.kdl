@@ -35,7 +35,7 @@ output "DP-2" {
 
 
 output "eDP-1" {
-   off
+   scale 2
 }
 output "DP-3" {
 //    variable-refresh-rate
@@ -181,10 +181,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-    Mod+SPACE hotkey-overlay-title="Run an Application: fuzzel" { spawn "walker"; }
-    Mod+Alt+SPACE hotkey-overlay-title="Omarchy" {spawn "~/.local/share/omarchy/bin/omarchy-menu"; }
-    Mod+Escape hotkey-overlay-title="System" {spawn "~/.local/share/omarchy/bin/omarchy-menu" "system"; }
-    Mod+B hotkey-overlay-title="Open Chrome" { spawn "chromium"; }
+    Mod+SPACE hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+B hotkey-overlay-title="Open Chrome" { spawn "google-chrome-stable"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+X hotkey-overlay-title="Change wallpaper" { spawn "/home/phobus/bin/bg.sh"; }
 
