@@ -1,14 +1,14 @@
 {
   "position": "top",
   "modules-left": ["niri/workspaces"],
-  "modules-center": ["niri/window"],
-  "modules-right": ["memory","cpu","network", "pulseaudio", "battery", "clock"],
+  "modules-center": ["clock"],
+  "modules-right": ["memory","cpu","network", "pulseaudio", "battery"],
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "<span foreground='#f5c2e7'>  </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "pulseaudio": {
-      "format": "{icon}  {volume}%",
+      "format": " {icon}",
       "format-muted": "",
       "format-icons": {
           "default": ["", "", " "]
@@ -17,14 +17,32 @@
   },
   "memory": {
       "interval": 30,
-      "format": "  {used:0.2f} / {total:0.0f} GB",
+      "format": "  {used:0.2f}GB",
       "on-click": "ghostty -e btop"
   },
   "cpu": {
         "interval": 1,
         //"format": " {}%", // Icon: microchip
-        "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-        "max-length": 13,
-        "min-length": 13
-    }
+        "format": "  {usage}%"
+  },
+  "battery": {
+	"interval": 60,
+	"states": {
+		"warning": 30,
+		"critical": 15
+	},
+	"format": "{icon} {capacity}%",
+	"format-icons": ["", "", "", "", ""]
+   },
+   "network": {
+	"format": "{ifname}",
+	"format-wifi": "{essid} ({signalStrength}%) ",
+	"format-ethernet": "{ifname} ",
+	"format-disconnected": "", //An empty format will hide the module.
+	"format-disconnected": "",
+	"tooltip-format": "{ifname}",
+	"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+	"tooltip-format-ethernet": "{ifname} ",
+	"tooltip-format-disconnected": "Disconnected"
+   }
 }

@@ -118,7 +118,6 @@ spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 //spawn-at-startup "/home/phobus/bin/bg.sh"
 
-spawn-at-startup "swaybg" "-i" "~/.config/omarchy/current/background" "-m" "fill"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "mako"
 spawn-at-startup "/usr/bin/swayidle" "-w" \
@@ -141,7 +140,7 @@ animations {
 }
 
 window-rule {
-    // This regular expression is intentionally made as specific as possible,
+    // This regular expression is intentionally made as specific as possible
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
@@ -153,7 +152,7 @@ window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"chrome$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
