@@ -30,11 +30,11 @@ input {
 }
 
 output "DP-1" {
-//  scale 1.5
-//  mode "3840x2160@240.000"
-//  position x=800 y=1080
-    scale 2
-    mode "2880x1800@120.001"
+  scale  1.5
+ // mode "3840x2160@240.00"
+  position x=800 y=1080
+//   scale 1.6
+//   mode "2880x1800@120.001"
 }
 
 output "eDP-1" {
@@ -42,18 +42,18 @@ output "eDP-1" {
 }
 output "DP-2" {
 //    variable-refresh-rate
-    scale 2
-    mode "3840x2160@120.000"
+    scale 1.5
+ //   mode "3840x2160@100.00"
     position x=0 y=0
 }
 
-output "HDMI-A-3" {
+output "HDMI-A-1" {
    scale 2.0
-   mode "3840x2160@119.880"
+   position x=0 y=0
 }
 
 layout {
-    gaps 6
+    gaps 8 
 
     // - "always", the focused column will always be centered.
     // - "on-overflow", focusing a column will center it if it doesn't fit
@@ -69,7 +69,7 @@ layout {
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
     // preset-window-heights { }
 
-    default-column-width { proportion 0.7; }
+    default-column-width { proportion 0.5; }
     focus-ring {
         // Uncomment this line to disable the focus ring.
         //off
@@ -124,7 +124,7 @@ spawn-at-startup "xwayland-satellite"
 
 spawn-at-startup "swayosd-server"
 spawn-at-startup "mako"
-spawn-at-startup "/usr/bin/swayidle" "-w" \
+spawn-at-startup "swayidle" "-w" \
    "timeout" "600" "swaylock -f" \
    "timeout" "1200" "niri msg action power-off-monitors" \
    "resume" "niri msg action power-on-monitors" \
@@ -147,8 +147,13 @@ window-rule {
     // This regular expression is intentionally made as specific as possible
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id=r#"^org\.mitchellh\.ghostty$"#
     default-column-width {}
+}
+
+window-rule {
+    geometry-corner-radius 8 
+    clip-to-geometry true
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -156,8 +161,12 @@ window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"chrome$"# title="^Picture-in-Picture$"
-    open-floating true
+    default-column-width { fixed 640; }
+    default-window-height { fixed 360; }
+    default-floating-position x=20 y=100 relative-to="bottom-right"
+    match title="Picture-in-picture"
+    open-floating true 
+    open-focused true
 }
 
 environment {
@@ -376,6 +385,7 @@ binds {
     Mod+Shift+M { set-window-height "+3%"; }
 
     // Move the focused window between the floating and the tiling layout.
+    Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
