@@ -30,7 +30,7 @@ input {
 }
 
 output "DP-1" {
-  scale  1.5
+  scale  1.6
  // mode "3840x2160@240.00"
   position x=800 y=1080
 //   scale 1.6
@@ -38,10 +38,11 @@ output "DP-1" {
 }
 
 output "eDP-1" {
+   variable-refresh-rate
+   mode "2880x1800@120.000"
    scale 2
 }
 output "DP-2" {
-//    variable-refresh-rate
     scale 1.5
  //   mode "3840x2160@100.00"
     position x=0 y=0
@@ -69,7 +70,7 @@ layout {
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
     // preset-window-heights { }
 
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.7; }
     focus-ring {
         // Uncomment this line to disable the focus ring.
         //off
