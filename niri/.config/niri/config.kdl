@@ -119,18 +119,19 @@ layout {
     }
 }
 
-spawn-at-startup "waybar"
+//spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 //spawn-at-startup "/home/phobus/bin/bg.sh"
 
-spawn-at-startup "swayosd-server"
-spawn-at-startup "mako"
-spawn-at-startup "swayidle" "-w" \
-   "timeout" "600" "swaylock -f" \
-   "timeout" "1200" "niri msg action power-off-monitors" \
-   "resume" "niri msg action power-on-monitors" \
-   "before-sleep" "swaylock -f"
-spawn-at-startup "/usr/bin/sway-audio-idle-inhibit"
+//spawn-at-startup "swayosd-server"
+//spawn-at-startup "mako"
+//spawn-at-startup "swayidle" "-w" \
+//   "timeout" "600" "swaylock -f" \
+//   "timeout" "1200" "niri msg action power-off-monitors" \
+//   "resume" "niri msg action power-on-monitors" \
+//   "before-sleep" "swaylock -f"
+//spawn-at-startup "/usr/bin/sway-audio-idle-inhibit"
 //spawn-at-startup "gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\""
 
  prefer-no-csd
@@ -194,10 +195,12 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+SPACE hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+SPACE hotkey-overlay-title="Run an Application: fuzzel" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Mod+B hotkey-overlay-title="Open Chrome" { spawn "google-chrome-stable"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+X hotkey-overlay-title="Change wallpaper" { spawn "/home/phobus/bin/bg.sh"; }
+    Mod+Z hotkey-overlay-title="Clipboard History" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
+    Mod+T hotkey-overlay-title="Clipboard History" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "calculator"; }
 
     // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
