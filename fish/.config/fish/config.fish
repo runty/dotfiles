@@ -92,6 +92,7 @@ alias egrep='egrep --color=auto'
 alias vi='nvim'
 alias big="expac -H M '%m\t%n' | sort -h | nl" # Sort installed packages according to size in MB
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
+alias hx='helix'
 
 alias tb='nc termbin.com 9999'
 set -U fish_user_paths /opt/homebrew/bin/ /opt/homebrew/opt/ruby/bin/ $fish_user_paths
