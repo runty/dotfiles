@@ -1,0 +1,58 @@
+{
+  "position": "top",
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["memory","cpu","network", "pulseaudio", "bluetooth", "battery"],
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>  </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "pulseaudio": {
+      "format": " {icon}",
+      "format-muted": "",
+      "format-icons": {
+          "default": ["", "", " "]
+      },
+      "on-click": "pwvucontrol"
+  },
+  "memory": {
+      "interval": 30,
+      "format": "  {used:0.2f}GB",
+      "on-click": "ghostty -e btop"
+  },
+  "cpu": {
+        "interval": 1,
+        //"format": " {}%", // Icon: microchip
+        "format": "  {usage}%"
+  },
+  "bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": "  ",
+	"format-disabled": "", // an empty format will hide the module
+	"format-connected": "  ",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  "on-click": "blueberry"
+  },
+  "battery": {
+	"interval": 60,
+	"states": {
+		"warning": 30,
+		"critical": 15
+	},
+	"format": "{icon} {capacity}%",
+	"format-icons": ["", "", "", "", ""]
+   },
+   "network": {
+	"format": "{ifname}",
+	"format-wifi": "{essid} ({signalStrength}%) ",
+	"format-ethernet": "{ifname} ",
+	"format-disconnected": "", //An empty format will hide the module.
+	"format-disconnected": "",
+	"tooltip-format": "{ifname}",
+	"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+	"tooltip-format-ethernet": "{ifname} ",
+	"tooltip-format-disconnected": "Disconnected"
+   }
+}

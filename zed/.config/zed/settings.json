@@ -1,0 +1,22 @@
+{
+  "ui_font_size": 16,
+  "ui_font_family": "RecMonoCasual Nerd Font",
+  "buffer_font_size": 14,
+  "buffer_font_family": "ComicCodeLigatures Nerd Font",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "terminal": {
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "line_height": "standard"
+  },
+  "vim_mode": true,
+  "auto_install_extensions": {
+    "nix": true,
+    "rust": true,
+    "toml": true
+  },
+  "hour_format": "hour24"
+}

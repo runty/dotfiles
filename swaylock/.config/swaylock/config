@@ -1,0 +1,3 @@
+# Set image path to your wallpaper (absolute path required by swaylock)
+#image=/path/to/wallpaper.png
+indicator-idle-visible=true

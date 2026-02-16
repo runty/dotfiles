@@ -1,0 +1,58 @@
+theme = dark:"Catppuccin Mocha",light:"Catppuccin Latte"
+#theme = "3024 Day"
+#theme = GruvboxDark
+# font-family = Meslo LGS Nerd Font Mono
+# font-family = CaskaydiaMono Nerd Font
+#font-family = CaskaydiaCove Nerd Font Light
+#font-style = TX02 Nerd Font SemiCondensed Retina
+#CaskaydiaCove NFM Regular
+#font-family = CodeliaLigatures Nerd Font
+#font-family = TX02 Nerd Font SemiCondensed Retina
+#font-family = MonoLisa Nerd Font
+#font-family = ComicCodeLigatures Nerd Font
+#font-family = DankMonoNeue Nerd Font
+#font-family = ServerMono Nerd Font
+font-family = Maple Mono NF
+font-style = ExtraLight
+font-style-bold = Light
+font-style-italic = ExtraLight Italic
+font-style-bold-italic = Light Italic
+# font-family = CommitMono Nerd Font
+#font-family = 0xProto Nerd Font Mono
+#font-family = Annotation Mono Light
+font-size = 11
+background-opacity = 0.95
+gtk-titlebar = false
+#custom-shader = ~/.config/ghostty/shaders/bettercrt.glsl
+#custom-shader = ~/.config/ghostty/shaders/bloom.glsl
+quick-terminal-position=top
+quick-terminal-screen=main
+quick-terminal-autohide=false
+macos-option-as-alt=true
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = true
+window-height=45
+window-width=140
+focus-follows-mouse=true
+macos-titlebar-style = tabs
+macos-icon = custom-style
+macos-icon-frame = plastic
+macos-icon-ghost-color = cba6f7
+macos-icon-screen-color = 181825
+
+keybind =global:f12=toggle_quick_terminal
+keybind =f10=reload_config
+keybind =ctrl+alt+h=goto_split:left
+keybind =ctrl+alt+j=goto_split:bottom
+keybind =ctrl+alt+k=goto_split:top
+keybind =ctrl+alt+l=goto_split:right
+keybind =ctrl+alt+u=goto_split:previous
+keybind =ctrl+alt+i=goto_split:next
+keybind =super+e=new_split:down
+keybind =super+g=new_split:right
+keybind =shift+alt+h=resize_split:left,10
+keybind =shift+alt+l=resize_split:right,10
+keybind =shift+alt+j=resize_split:down,10
+keybind =shift+alt+k=resize_split:up,10
+keybind = shift+enter=text:\n
