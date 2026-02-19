@@ -102,7 +102,6 @@ starship init fish | source
 set -gx PATH $PATH $HOME/.lmstudio/bin
 # End of LM Studio CLI section
 
-
 # Added by Antigravity
 fish_add_path $HOME/.antigravity/antigravity/bin
 
@@ -110,6 +109,3 @@ fish_add_path $HOME/.antigravity/antigravity/bin
 if command -q op
     set -gx GEMINI_API_KEY (op item get "gemini-api" --vault="Automation" --fields password --reveal 2>/dev/null)
 end
-
-# OpenClaw Completion
-source "$HOME/.openclaw/completions/openclaw.fish"
